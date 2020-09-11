@@ -6,13 +6,84 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageView
+        android:id="@+id/styleRotate"
+        android:layout_width="109dp"
+        android:layout_height="95dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:layout_constraintVertical_bias="0.791"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="402dp"
+        android:layout_height="304dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="44dp"
+        android:text="Play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/volumeUp"
+        android:layout_width="109dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/puseButton"
+        app:layout_constraintVertical_bias="0.48"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <Button
+        android:id="@+id/puseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Puse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toEndOf="@+id/playButton"
+        app:layout_constraintTop_toBottomOf="@+id/videoView" />
+
+    <ImageView
+        android:id="@+id/volumeDown"
+        android:layout_width="133dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="196dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/volumeUp"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/puseButton"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="384dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="236dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.624"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playButton"
+        app:layout_constraintVertical_bias="0.171" />
 </androidx.constraintlayout.widget.ConstraintLayout>
